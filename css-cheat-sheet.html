@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Cheat Sheet</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f4f4f4;
+        padding: 20px;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      h1, h2 {
+        color: #333;
+        text-align: center;
+      }
+
+      dl {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      dt {
+        font-weight: bold;
+        color: #2c3e50;
+        margin-top: 10px;
+      }
+
+      dd {
+        margin: 5px 0 15px 20px;
+        color: #555;
+      }
+
+      .example {
+        background-color: #eee;
+        padding: 10px;
+        border-radius: 5px;
+        font-family: monospace;
+        white-space: pre-wrap;
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>CSS Cheat Sheet</h1>
+      <p>This guide provides descriptions and usage examples for common CSS properties.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Text and Font Properties</h2>
+        <dl>
+          <dt>color</dt>
+          <dd>Sets the color of the text.
+            <div class="example">
+              color: blue;
+            </div>
+          </dd>
+
+          <dt>font-size</dt>
+          <dd>Specifies the size of the font.
+            <div class="example">
+              font-size: 16px;
+            </div>
+          </dd>
+
+          <dt>font-family</dt>
+          <dd>Sets the font type for text.
+            <div class="example">
+              font-family: Arial, sans-serif;
+            </div>
+          </dd>
+
+          <dt>font-weight</dt>
+          <dd>Adjusts the boldness of text.
+            <div class="example">
+              font-weight: bold;
+            </div>
+          </dd>
+
+          <dt>text-align</dt>
+          <dd>Specifies the horizontal alignment of text.
+            <div class="example">
+              text-align: center;
+            </div>
+          </dd>
+
+          <dt>text-decoration</dt>
+          <dd>Defines decorations for text like underline or line-through.
+            <div class="example">
+              text-decoration: underline;
+            </div>
+          </dd>
+
+          <dt>text-transform</dt>
+          <dd>Modifies text capitalization.
+            <div class="example">
+              text-transform: uppercase;
+            </div>
+          </dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Background Properties</h2>
+        <dl>
+          <dt>background-color</dt>
+          <dd>Sets the background color.
+            <div class="example">
+              background-color: #f0f0f0;
+            </div>
+          </dd>
+
+          <dt>background-image</dt>
+          <dd>Sets a background image.
+            <div class="example">
+              background-image: url('image.jpg');
+            </div>
+          </dd>
+
+          <dt>background-repeat</dt>
+          <dd>Defines if/how a background image repeats.
+            <div class="example">
+              background-repeat: no-repeat;
+            </div>
+          </dd>
+
+          <dt>background-position</dt>
+          <dd>Sets the starting position of a background image.
+            <div class="example">
+              background-position: center center;
+            </div>
+          </dd>
+
+          <dt>background-size</dt>
+          <dd>Specifies the size of a background image.
+            <div class="example">
+              background-size: cover;
+            </div>
+          </dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Box Model Properties</h2>
+        <dl>
+          <dt>width</dt>
+          <dd>Defines the width of an element.
+            <div class="example">
+              width: 200px;
+            </div>
+          </dd>
+
+          <dt>height</dt>
+          <dd>Defines the height of an element.
+            <div class="example">
+              height: 100px;
+            </div>
+          </dd>
+
+          <dt>padding</dt>
+          <dd>Sets the padding inside an element's border.
+            <div class="example">
+              padding: 10px;
+            </div>
+          </dd>
+
+          <dt>margin</dt>
+          <dd>Sets the space outside an element's border.
+            <div class="example">
+              margin: 20px;
+            </div>
+          </dd>
+
+          <dt>border</dt>
+          <dd>Sets the border of an element.
+            <div class="example">
+              border: 1px solid #000;
+            </div>
+          </dd>
+
+          <dt>border-radius</dt>
+          <dd>Defines rounded corners for elements.
+            <div class="example">
+              border-radius: 5px;
+            </div>
+          </dd>
+
+          <dt>box-shadow</dt>
+          <dd>Adds shadow to an element's box.
+            <div class="example">
+              box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            </div>
+          </dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Display and Positioning</h2>
+        <dl>
+          <dt>display</dt>
+          <dd>Specifies how an element is displayed.
+            <div class="example">
+              display: inline-block;
+            </div>
+          </dd>
+
+          <dt>position</dt>
+          <dd>Defines the positioning type (static, relative, absolute, fixed, sticky).
+            <div class="example">
+              position: relative;
+            </div>
+          </dd>
+
+          <dt>top, right, bottom, left</dt>
+          <dd>Offsets an element from the respective side when using position (except static).
+            <div class="example">
+              top: 10px;
+              left: 5px;
+            </div>
+          </dd>
+
+          <dt>float</dt>
+          <dd>Moves elements to the left or right, allowing other content to wrap around.
+            <div class="example">
+              float: left;
+            </div>
+          </dd>
+
+          <dt>clear</dt>
+          <dd>Stops elements from wrapping around floated elements.
+            <div class="example">
+              clear: both;
+            </div>
+          </dd>
+
+          <dt>z-index</dt>
+          <dd>Sets the stack order of positioned elements.
+            <div class="example">
+              z-index: 10;
+            </div>
+          </dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Flexbox Properties</h2>
+        <dl>
+          <dt>display: flex</dt>
+          <dd>Activates flexbox layout on a container.
+            <div class="example">
+              display: flex;
+            </div>
+          </dd>
+
+          <dt>justify-content</dt>
+          <dd>Aligns items horizontally within a flex container.
+            <div class="example">
+              justify-content: center;
+            </div>
+          </dd>
+
+          <dt>align-items</dt>
+          <dd>Aligns items vertically within a flex container.
+            <div class="example">
+              align-items: center;
+            </div>
+          </dd>
+
+          <dt>flex-direction</dt>
+          <dd>Sets the main axis direction.
+            <div class="example">
+              flex-direction: row;
+            </div>
+          </dd>
+
+          <dt>flex-wrap</dt>
+          <dd>Controls if items wrap to new lines.
+            <div class="example">
+              flex-wrap: wrap;
+            </div>
+          </dd>
+
+          <dt>align-self</dt>
+          <dd>Overrides align-items for individual items.
+            <div class="example">
+              align-self: flex-end;
+            </div>
+          </dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Grid Properties</h2>
+        <dl>
+          <dt>display: grid</dt>
+          <dd>Activates grid layout on a container.
+            <div class="example">
+              display: grid;
+            </div>
+          </dd>
+
+          <dt>grid-template-columns</dt>
+          <dd>Defines the number and width of columns in a grid.
+            <div class="example">
+              grid-template-columns: 1fr 2fr;
+            </div>
+          </dd>
+
+          <dt>grid-template-rows</dt>
+          <dd>Defines the number and height of rows in a grid.
+            <div class="example">
+              grid-template-rows: 100px auto;
+            </div>
+          </dd>
+
+          <dt>gap</dt>
+          <dd>Sets space between grid items.
+            <div class="example">
+              gap: 10px;
+            </div>
+          </dd>
+
+          <dt>grid-column</dt>
+          <dd>Specifies the column position of a grid item.
+            <div class="example">
+              grid-column: 1 / 3;
+            </div>
+          </dd>
+
+          <dt>grid-row</dt>
+          <dd>Specifies the row position of a grid item.
+            <div class="example">
+              grid-row: 1 / 2;
+            </div>
+          </dd>
+        </dl>
+      </section>
+
+      <section>
+        
+<head>
+    <title>PDF in HTML</title>
+</head>
+<style>
+    .pdf {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+    }
+
+    .pdf,
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+   h1,
+    h3 {
+        text-align: center;
+    }
+
+    h1 {
+        color: green;
+    }
+</style>
+
+<body>
+        <h1>GeeksforGeeks</h1>
+        <h3>Embedding the PDF file Using embed Tag</h3>
+        <embed class="pdf" 
+               src="csscheatsheet.pdf"
+            width="800" height="500">
+           
+      </section>
+    </main>
+
+    <footer>
+        <a href="https://devdocs.io/css/">DEV DOCS CSS</a>
+        <a href="https://www.w3schools.com/css/css_intro.asp">W3 Schools CSS</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started"> MDN WEB DOCS CSS</a>
+      <p>&copy; 2024 Complete CSS Cheat Sheet. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

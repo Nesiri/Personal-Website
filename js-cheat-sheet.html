@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Cheat Sheet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f4f4;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      color: #333;
+      text-align: center;
+    }
+
+    dl {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    dt {
+      font-weight: bold;
+      color: #2c3e50;
+      margin-top: 10px;
+    }
+
+    dd {
+      margin: 5px 0 15px 20px;
+      color: #555;
+    }
+
+    .example {
+      background-color: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JavaScript Cheat Sheet</h1>
+    <p>This guide provides explanations and examples for common JavaScript concepts and syntax.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Variables</h2>
+      <dl>
+        <dt>var</dt>
+        <dd>Declares a variable with function or global scope.
+          <div class="example">
+            var name = "John";
+          </div>
+        </dd>
+
+        <dt>let</dt>
+        <dd>Declares a block-scoped variable (ES6).
+          <div class="example">
+            let age = 25;
+          </div>
+        </dd>
+
+        <dt>const</dt>
+        <dd>Declares a block-scoped, read-only variable (ES6).
+          <div class="example">
+            const pi = 3.14;
+          </div>
+        </dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Data Types</h2>
+      <dl>
+        <dt>String</dt>
+        <dd>Represents text.
+          <div class="example">
+            let text = "Hello, World!";
+          </div>
+        </dd>
+
+        <dt>Number</dt>
+        <dd>Represents numerical values.
+          <div class="example">
+            let count = 42;
+          </div>
+        </dd>
+
+        <dt>Boolean</dt>
+        <dd>Represents true or false values.
+          <div class="example">
+            let isActive = true;
+          </div>
+        </dd>
+
+        <dt>Array</dt>
+        <dd>Stores multiple values in a single variable.
+          <div class="example">
+            let fruits = ["apple", "banana", "cherry"];
+          </div>
+        </dd>
+
+        <dt>Object</dt>
+        <dd>Stores properties and methods.
+          <div class="example">
+            let person = { name: "John", age: 30 };
+          </div>
+        </dd>
+
+        <dt>Undefined</dt>
+        <dd>Variable declared but not assigned a value.
+          <div class="example">
+            let data;
+          </div>
+        </dd>
+
+        <dt>Null</dt>
+        <dd>Represents "no value."
+          <div class="example">
+            let empty = null;
+          </div>
+        </dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Operators</h2>
+      <dl>
+        <dt>Arithmetic Operators</dt>
+        <dd>Used for mathematical operations.
+          <div class="example">
+            let sum = 5 + 3; // addition
+            let diff = 5 - 3; // subtraction
+          </div>
+        </dd>
+
+        <dt>Comparison Operators</dt>
+        <dd>Compare two values.
+          <div class="example">
+            let isEqual = 5 == "5"; // true
+          </div>
+        </dd>
+
+        <dt>Logical Operators</dt>
+        <dd>Combine boolean values.
+          <div class="example">
+            let result = (true && false); // false
+          </div>
+        </dd>
+
+        <dt>Assignment Operators</dt>
+        <dd>Assign values to variables.
+          <div class="example">
+            let x = 10;
+            x += 5; // x = 15
+          </div>
+        </dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Functions</h2>
+      <dl>
+        <dt>Function Declaration</dt>
+        <dd>Defines a function.
+          <div class="example">
+            function greet() {
+              console.log("Hello!");
+            }
+          </div>
+        </dd>
+
+        <dt>Function Expression</dt>
+        <dd>Stores a function in a variable.
+          <div class="example">
+            let sayHi = function() {
+              console.log("Hi!");
+            };
+          </div>
+        </dd>
+
+        <dt>Arrow Functions</dt>
+        <dd>Concise syntax for function expressions (ES6).
+          <div class="example">
+            let add = (a, b) => a + b;
+          </div>
+        </dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Control Flow</h2>
+      <dl>
+        <dt>if...else</dt>
+        <dd>Executes code based on a condition.
+          <div class="example">
+            if (x > 10) {
+              console.log("Greater than 10");
+            } else {
+              console.log("10 or less");
+            }
+          </div>
+        </dd>
+
+        <dt>switch</dt>
+        <dd>Performs different actions based on cases.
+          <div class="example">
+            let day = 2;
+            switch (day) {
+              case 1: console.log("Monday"); break;
+              case 2: console.log("Tuesday"); break;
+              default: console.log("Other day");
+            }
+          </div>
+        </dd>
+
+        <dt>for loop</dt>
+        <dd>Loops through a block of code a set number of times.
+          <div class="example">
+            for (let i = 0; i < 5; i++) {
+              console.log(i);
+            }
+          </div>
+        </dd>
+
+        <dt>while loop</dt>
+        <dd>Loops as long as a condition is true.
+          <div class="example">
+            let i = 0;
+            while (i < 5) {
+              console.log(i);
+              i++;
+            }
+          </div>
+        </dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>DOM Manipulation</h2>
+      <dl>
+        <dt>document.getElementById()</dt>
+        <dd>Selects an element by its ID.
+          <div class="example">
+            let element = document.getElementById("myElement");
+          </div>
+        </dd>
+
+        <dt>document.querySelector()</dt>
+        <dd>Selects the first element matching a CSS selector.
+          <div class="example">
+            let item = document.querySelector(".myClass");
+          </div>
+        </dd>
+
+        <dt>element.innerHTML</dt>
+        <dd>Changes the inner HTML of an element.
+          <div class="example">
+            element.innerHTML = "New content";
+          </div>
+        </dd>
+
+        <dt>element.style.property</dt>
+        <dd>Changes the style of an element.
+          <div class="example">
+            element.style.color = "red";
+          </div>
+        </dd>
+
+        <dt>element.addEventListener()</dt>
+        <dd>Attaches an event handler to an element.
+          <div class="example">
+            button.addEventListener("click", () => {
+              console.log("Button clicked!");
+            });
+          </div>
+        </dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Events</h2>
+      <dl>
+        <dt>click</dt>
+        <dd>Triggered when an element is clicked.
+          <div class="example">
+            button.addEventListener("click", function() {
+              alert("Button clicked!");
+            });
+          </div>
+        </dd>
+
+        <dt>mouseover</dt>
+        <dd>Triggered when the mouse is over an element.
+          <div class="example">
+            element.addEventListener("mouseover", function() {
+              console.log("Mouse over element");
+            });
+          </div>
+        </dd>
+
+        <dt>keypress</dt>
+        <dd>Triggered when a key is pressed on the keyboard.
+          <div class="example">
+            document.addEventListener("keypress", function(event) {
+              console.log("Key pressed:", event.key);
+            });
+          </div>
+        </dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://devdocs.io/javascript/">DEV DOCS JS reference</a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN WEB DOCS</a>
+    <a href="https://www.w3schools.com/js/js_intro.asp">W3 schools Js</a>
+    <a href="https://htmlcheatsheet.com/js/">JavaScript cheat sheet</a>
+    <p>&copy; 2024 JavaScript Cheat Sheet. All rights reserved.</p>
+  </footer>
+</body>
+</html>
