@@ -4,6 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Cheat Sheet</title>
+
+
+
+    
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+          margin: 20px;
+          background-color: #f4f4f4;
+      }
+      h1, h2 {
+          text-align: center;
+          color: #333;
+      }
+      .selector-section {
+          margin-top: 20px;
+          padding: 10px;
+          border: 1px solid #ddd;
+          background-color: #fff;
+          border-radius: 5px;
+      }
+      .selector {
+          font-weight: bold;
+          color: #0073e6;
+      }
+      .description {
+          margin-left: 10px;
+          color: #333;
+      }
+      .section-title {
+          font-size: 1.2em;
+          color: #555;
+          margin-bottom: 10px;
+          border-bottom: 2px solid #0073e6;
+          padding-bottom: 5px;
+      }
+  </style>
+</head>
+<body>
+
+<h1>CSS Selectors Cheat Sheet</h1>
+<p>A complete reference guide to CSS selectors, including basic, attribute, combinator, pseudo-classes, pseudo-elements, and advanced selectors.</p>
+
+<div class="selector-section">
+  <h2 class="section-title">1. Basic Selectors</h2>
+  <p><span class="selector">Universal Selector (*)</span>: Selects all elements. Use sparingly due to potential performance issues.</p>
+  <p><span class="selector">Type Selector (e.g., div, p)</span>: Targets all elements of a specific type. Ideal for broad styles.</p>
+  <p><span class="selector">Class Selector (.class-name)</span>: Targets elements with a specific class. Reusable and versatile.</p>
+  <p><span class="selector">ID Selector (#id-name)</span>: Targets an element with a specific ID. Use for unique elements.</p>
+</div>
+
+<div class="selector-section">
+  <h2 class="section-title">2. Attribute Selectors</h2>
+  <p><span class="selector">[attribute]</span>: Selects elements with a specific attribute.</p>
+  <p><span class="selector">[attribute=value]</span>: Selects elements with a specific attribute value.</p>
+  <p><span class="selector">[attribute~=value]</span>: Selects elements with an attribute containing a specific word in a space-separated list.</p>
+  <p><span class="selector">[attribute|=value]</span>: Matches elements with an attribute that matches exactly or begins with 'value-'.</p>
+  <p><span class="selector">[attribute^=value]</span>: Selects elements where an attribute starts with a specific value.</p>
+  <p><span class="selector">[attribute$=value]</span>: Selects elements where an attribute ends with a specific value.</p>
+  <p><span class="selector">[attribute*=value]</span>: Selects elements where an attribute contains a specific substring.</p>
+</div>
+
+<div class="selector-section">
+  <h2 class="section-title">3. Combinator Selectors</h2>
+  <p><span class="selector">Descendant Selector (A B)</span>: Selects elements inside another element.</p>
+  <p><span class="selector">Child Selector (A > B)</span>: Selects direct child elements only.</p>
+  <p><span class="selector">Adjacent Sibling (A + B)</span>: Selects the immediate sibling following a specified element.</p>
+  <p><span class="selector">General Sibling (A ~ B)</span>: Selects all siblings that follow a specific element.</p>
+</div>
+
+<div class="selector-section">
+  <h2 class="section-title">4. Pseudo-Classes</h2>
+  <p><span class="selector">:first-child</span>: Selects the first child element within a parent.</p>
+  <p><span class="selector">:last-child</span>: Selects the last child element within a parent.</p>
+  <p><span class="selector">:nth-child(n)</span>: Selects elements based on their position in the parent.</p>
+  <p><span class="selector">:hover</span>: Styles elements on hover.</p>
+  <p><span class="selector">:focus</span>: Styles elements when focused (e.g., input fields).</p>
+  <p><span class="selector">:active</span>: Styles elements when activated, like clicked buttons.</p>
+  <p><span class="selector">:visited</span>: Styles visited links.</p>
+  <p><span class="selector">:checked</span>: Targets checked form elements like checkboxes.</p>
+</div>
+
+<div class="selector-section">
+  <h2 class="section-title">5. Pseudo-Elements</h2>
+  <p><span class="selector">::before</span>: Inserts content before the element's content.</p>
+  <p><span class="selector">::after</span>: Inserts content after the element's content.</p>
+  <p><span class="selector">::first-line</span>: Applies styles to the first line of an element's content.</p>
+  <p><span class="selector">::first-letter</span>: Applies styles to the first letter of an element's content.</p>
+</div>
+
+<div class="selector-section">
+  <h2 class="section-title">6. Advanced Selectors</h2>
+  <p><span class="selector">:not(selector)</span>: Selects all elements that do not match the selector.</p>
+  <p><span class="selector">:is(selector)</span>: Matches any element within a list of selectors.</p>
+  <p><span class="selector">:where(selector)</span>: Matches elements in a list without adding specificity.</p>
+  <p><span class="selector">:has(selector)</span>: Selects elements containing specified descendants (experimental).</p>
+  <p><span class="selector">:focus-within</span>: Styles elements if any of its descendants are focused.</p>
+  <p><span class="selector">:focus-visible</span>: Applies styles to focused elements that should visually indicate focus.</p>
+</div>
+
+
+
     <style>
       body {
         font-family: Arial, sans-serif;
