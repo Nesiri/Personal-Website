@@ -1,0 +1,104 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  #Home{
+
+    position: relative;
+   font-family: 'Old English Text MT', serif;
+    color: blue;
+    font-size: 2vw;
+  }
+  
+  h1, h2 {
+    color: #444;
+    text-align: center;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('https://source.unsplash.com/1920x1080/?camera,photography') no-repeat center center/cover;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    background: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn:hover {
+    background: #ff8b77;
+    transform: scale(1.1);
+  }
+  
+  /* Section */
+  .section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .section p {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Gallery Section */
+  .gallery {
+    padding: 50px 20px;
+    background: #f4f4f9;
+  }
+  
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin: 0 auto;
+    max-width: 900px;
+  }
+  
+  .photo-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .photo-grid img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Footer */
+  .footer {
+    background: #444;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
