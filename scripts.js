@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Function to enable edit mode with code verification
 function enableEditMode() {
-    const correctCode = "1234"; // Replace with your secret code
+    const correctCode = "RES@12me"; // Replace with your secret code
     const codePopup = document.getElementById("codePopup");
     const editCodeInput = document.getElementById("editCode");
     const confirmCodeButton = document.getElementById("confirmCodeButton");
