@@ -14,7 +14,11 @@ const content = {
             id: "experience",
             title: "Work Experience",
             content: "Add details about your professional experience here.",
+            style: {
+                fontSize: "12px", 
+            },
         },
+        
         {
             id: "education",
             title: "Education",
@@ -34,6 +38,10 @@ const content = {
         text: "&copy; 2024 Nesru Abbamilki | Built with ❤️ for future opportunities.",
     },
 };
+
+function clearAllSavedContent() {
+    localStorage.clear();
+}
 
 function loadContent(key, fallback) {
     const savedContent = localStorage.getItem(key);
@@ -63,11 +71,13 @@ function buildMain() {
         .filter((section) => section.id !== "contact-section")
         .map((section) => {
             const sectionContent = loadContent(section.id, section.content);
+            const fontSize = section.style?.fontSize || "1vw"; // Default font size if not specified
             return `
                 <section id="${section.id}">
                     <h2>${section.title}</h2>
                     <div class="content-area" 
                          contenteditable="false" 
+                         style="font-size: ${fontSize};" 
                          oninput="saveContent('${section.id}', this.innerHTML)">
                         ${sectionContent}
                     </div>
@@ -78,6 +88,7 @@ function buildMain() {
 
     main.innerHTML = sectionHTML;
 }
+
 
 function buildHeader() {
     const header = document.getElementById("header");
@@ -104,15 +115,21 @@ function buildNav() {
         </ul>
     `;
 }
-
 function buildFooter() {
     const footer = document.getElementById("footer");
     const contentData = getPersistedContent();
 
+    
     footer.innerHTML = `
         <p>${loadContent("footer-text", contentData.footer.text)}</p>
+        <button id="editButton">Edit</button>
+        <input type="text" id="editCode" placeholder="Enter code here" style="display: none;">
     `;
+
+   
+ 
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
     persistContent();
@@ -141,34 +158,44 @@ document.addEventListener("DOMContentLoaded", () => {
     buildNav();
     buildMain();
     buildFooter();
+    enableEditMode();
 });
 
 function enableEditMode() {
     const correctCode = "1234"; 
-    const codePopup = document.getElementById("codePopup");
+    const editButton = document.getElementById("editButton");
     const editCodeInput = document.getElementById("editCode");
-    const confirmCodeButton = document.getElementById("confirmCodeButton");
-    const cancelPopupButton = document.getElementById("cancelPopupButton");
 
-    codePopup.style.display = "block";
+  
+    editCodeInput.style.display = "none";
 
-    confirmCodeButton.addEventListener("click", () => {
-        const userCode = editCodeInput.value;
-        if (userCode === correctCode) {
-            document.querySelectorAll(".content-area").forEach((element) => {
-                element.contentEditable = "true";
-                element.style.border = "1px dashed #ccc"; 
-            });
-            alert("Edit mode enabled!");
-            codePopup.style.display = "none";
+  
+    editButton.addEventListener("click", function() {
+       
+        if (editCodeInput.style.display === "none") {
+            editCodeInput.style.display = "inline"; 
         } else {
-            alert("Incorrect code. Action canceled.");
-        }
-    });
+            const userCode = editCodeInput.value.trim(); 
 
-    cancelPopupButton.addEventListener("click", () => {
-        codePopup.style.display = "none"; 
+            if (userCode === correctCode) {
+                
+                document.querySelectorAll(".content-area").forEach((element) => {
+                    element.contentEditable = "true";
+                    element.style.border = "1px dashed #ccc"; 
+                    element.style.backgroundColor = "#fff"; 
+                });
+
+               
+                alert("Edit mode enabled!");
+
+                editCodeInput.style.display = "none"; 
+                editCodeInput.value = ""; 
+            } else {
+              
+                alert("Incorrect code. Try again.");
+            }
+        }
     });
 }
 
-document.getElementById("editModeButton").addEventListener("click", enableEditMode);
+
