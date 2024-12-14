@@ -195,37 +195,7 @@ main nav a:hover {
     color: #0056b3;
 }
 
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
 
-.popup-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.popup-buttons button {
-    margin: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.popup-buttons button:hover {
-    opacity: 0.8;
-}
 
 
 #activity-section {
@@ -269,4 +239,26 @@ figure{
 }
 
 
+#editButton {
+    width: 100px;
+    color: red;
+    font-size: 1.5vw;
+    background-color: #333333;
+    border: none;
+    position: relative;
+    right: 30vw;
+    bottom: 10px;
+}
 
+#editButton:hover {
+    color: green;
+}
+
+#editCode{
+ display: none;
+ width: 100px;
+ height: 30px;
+ position: relative;
+ right: 30vw;
+ bottom: 15px;
+}
