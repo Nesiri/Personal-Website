@@ -79,7 +79,7 @@ function buildMain() {
         .filter((section) => section.id !== "contact-section")
         .map((section) => {
             const sectionContent = loadContent(section.id, section.content);
-            const fontSize = section.style?.fontSize || "1vw"; // Default font size if not specified
+            const fontSize = section.style?.fontSize || "calc(10px + 0.5vw)"; // Default font size if not specified
             return `
                 <section id="${section.id}">
                     <h2>${section.title}</h2>
