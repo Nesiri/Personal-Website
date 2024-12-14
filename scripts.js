@@ -8,21 +8,33 @@ const content = {
         {
             id: "bio",
             title: "About Me",
-            content: "Write about yourself here.",
+            content: [ "I can communicate between server and client using HTML/CSS, Java scripts, IOT, and C++ programming language. I also have teamwork, communication, and leadership experiences during collaboration.",
+                       "Work ethics and attitude: I am goal-focused so I am determined.",
+                      "In my previous job, I had to work independently with little supervision and assistance. Our industry operates in a fast-paced environment, where its speed is relative to the demand of customers, When things became very fast-paced and employees were absent, I worked hard to finish the job on time. Thus, my supervisor often thanked me, which I consider a celebration of my strong work ethic.",
+
+                     "I am committed to professional development and regularly participate in software development to stay at the forefront of drafting technology."
+                 ],
         },
         {
             id: "experience",
             title: "Work Experience",
-            content: "Add details about your professional experience here.",
-            style: {
-                fontSize: "12px", 
-            },
+            content: ["Cargill",
+                       "Apr 2023 - Present 1 year 9 months",
+
+                       "Alberta, Canada.",
+
+                   "At Cargill,I was responsible for scaling products and transporting them to the elevator for shipment. My duties included measuring the products accurately and working with teams to ensure everything was prepared on time for dispatch. This job required strong attention to detail and teamwork to keep things running smoothly"
+                ]
+           
         },
         
         {
             id: "education",
             title: "Education",
-            content: "Describe your educational background here.",
+            content:[ "Bow Valley College",
+                     "Diploma of Education Software Development",
+                     "2024 - 2026.",
+            ]
         },
         {
             id: "activity",
@@ -38,7 +50,6 @@ const content = {
         text: "&copy; 2024 Nesru Abbamilki | Built with ❤️ for future opportunities.",
     },
 };
-
 
 
 function loadContent(key, fallback) {
@@ -60,7 +71,6 @@ function getPersistedContent() {
     const persisted = localStorage.getItem("content");
     return persisted ? JSON.parse(persisted) : content;
 }
-
 function buildMain() {
     const main = document.getElementById("main");
     const contentData = getPersistedContent();
@@ -86,6 +96,7 @@ function buildMain() {
 
     main.innerHTML = sectionHTML;
 }
+
 
 
 function buildHeader() {
@@ -160,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function enableEditMode() {
-    const correctCode = "Res@1234ume"; 
+    const correctCode = "1234"; 
     const editButton = document.getElementById("editButton");
     const editCodeInput = document.getElementById("editCode");
 
