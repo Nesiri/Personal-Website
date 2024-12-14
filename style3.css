@@ -9,6 +9,7 @@ body {
   #Home{
 
     position: relative;
+    /*bottom: 10vw;*/
    font-family: 'Old English Text MT', serif;
     color: blue;
     font-size: 2vw;
@@ -19,18 +20,21 @@ body {
     text-align: center;
   }
   
-  /* Hero Section */
   .hero {
-    background: url('https://source.unsplash.com/1920x1080/?camera,photography') no-repeat center center/cover;
+    position: relative;
+    background: url('Jima.jpg') no-repeat center center/cover;
     color: white;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 0 20px;
-  }
+    overflow: hidden; 
+}
+
+
+
+
   
   .hero h1 {
     font-size: 3em;
@@ -38,11 +42,15 @@ body {
   }
   
   .hero p {
+    position: relative;
+    top: 20vw;
     font-size: 1.2em;
     margin-bottom: 20px;
   }
   
   .btn {
+    position: relative;
+    top: 20vw;
     background: #ff6f61;
     color: white;
     padding: 10px 20px;
@@ -102,3 +110,75 @@ body {
     text-align: center;
   }
   
+
+  table {
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+
+  td {
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+
+  img:hover {
+    transform: scale(1.1);
+  }
+
+
+  form {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+
+  input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  #welcome-header {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+
+  }
+
+  #welcome-header.visible {
+    opacity: 1;
+  }
+
+ 
