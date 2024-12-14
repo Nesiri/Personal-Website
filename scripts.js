@@ -39,9 +39,7 @@ const content = {
     },
 };
 
-function clearAllSavedContent() {
-    localStorage.clear();
-}
+
 
 function loadContent(key, fallback) {
     const savedContent = localStorage.getItem(key);
@@ -162,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function enableEditMode() {
-    const correctCode = "1234"; 
+    const correctCode = "Res@1234ume"; 
     const editButton = document.getElementById("editButton");
     const editCodeInput = document.getElementById("editCode");
 
