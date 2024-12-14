@@ -8,11 +8,14 @@
 </head>
 <body>
     <header>
+
         <a href="index.html">Home</a>
+
         <h1>HTML Cheat Sheet</h1>
         <p>A quick reference for common HTML tags, attributes, and examples.</p>
+    
     </header>
-
+  
     <nav>
         <ul>
             <li><a href="#tags">HTML Tags</a></li>
@@ -23,91 +26,83 @@
     </nav>
 
     <main>
-        <!-- HTML Tags Section -->
+        
         <section id="tags">
             <h2>Common HTML Tags</h2>
-            <ul>
-                <li><code>&lt;h1&gt; - &lt;h6&gt;</code>: Headings</li>
-                <li><code>&lt;p&gt;</code>: Paragraph</li>
-                <li><code>&lt;a&gt;</code>: Anchor (link)</li>
-                <li><code>&lt;img&gt;</code>: Image</li>
-                <li><code>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</code>: Lists</li>
-                <li><code>&lt;table&gt;</code>: Table</li>
-            </ul>
+            <pre>
+                &lt;h1&gt; - &lt;h6&gt;: Headings
+                &lt;p&gt;: Paragraph
+                &lt;a&gt;: Anchor (link)
+                &lt;img&gt;: Image
+                &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;: Lists
+                &lt;table&gt;: Table
+            </pre>
         </section>
 
-        <!-- HTML Attributes Section -->
+      
         <section id="attributes">
             <h2>Useful Attributes</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Attribute</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><code>href</code></td>
-                        <td>Specifies the URL for a link</td>
-                    </tr>
-                    <tr>
-                        <td><code>src</code></td>
-                        <td>Specifies the source of an image</td>
-                    </tr>
-                    <tr>
-                        <td><code>alt</code></td>
-                        <td>Provides alternative text for an image</td>
-                    </tr>
-                    <tr>
-                        <td><code>class</code></td>
-                        <td>Assigns a class to an element for CSS styling</td>
-                    </tr>
-                    <tr>
-                        <td><code>id</code></td>
-                        <td>Defines a unique identifier for an element</td>
-                    </tr>
-                </tbody>
-            </table>
+            <pre>
+                href: Specifies the URL for a link
+                src: Specifies the source of an image
+                alt: Provides alternative text for an image
+                class: Assigns a class to an element for CSS styling
+                id: Defines a unique identifier for an element
+            </pre>
         </section>
 
-        <!-- Code Examples Section -->
+      
         <section id="examples">
             <h2>Code Snippets</h2>
             <h3>Basic HTML Structure</h3>
             <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;Page Title&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;This is a heading&lt;/h1&gt;
-    &lt;p&gt;This is a paragraph.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                  &lt;head&gt;
+                           &lt;title&gt;Page Title&lt;/title&gt;
+                  &lt;/head&gt;
+                 &lt;body&gt;
+                      &lt;h1&gt;This is a heading&lt;/h1&gt;
+                       &lt;p&gt;This is a paragraph.&lt;/p&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
             </pre>
 
             <h3>Image Example</h3>
             <pre>
-&lt;img src="image.jpg" alt="Description of image"&gt;
+                &lt;img src="image.jpg" alt="Description of image"&gt;
             </pre>
         </section>
 
-        <!-- Resources Section -->
+      
+        <section id="pdf">
+            <h3>Embedding a PDF File Using the Embed Tag</h3>
+            <embed class="pdf" src="HTML-Cheat-Sheet.pdf" width="800" height="500" type="application/pdf">
+        </section>
+
+         
         <section id="resources">
             <h2>Resources</h2>
             <ul>
+                <li><a href="https://devdocs.io/html/" target="_blank">Devdocs</a></li>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs: HTML</a></li>
                 <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools: HTML</a></li>
+                <li><a href="https://htmlcheatsheet.com/js/">Html-Css-Js</a></li>
             </ul>
         </section>
     </main>
-
+  
+    
     <footer>
-        <p>&copy; 2024 Your Name | Built for learning purposes.</p>
+        <button id="editButton">Edit</button>
+        <input type="text" id="editCode" placeholder="Enter code here">
+        <p>&copy; 2024 Nesru | Built for learning purposes.</p>
     </footer>
 
     <script src="script.js"></script>
+   
+
+ 
+
 </body>
 </html>
